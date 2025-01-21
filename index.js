@@ -17,6 +17,10 @@ app.post('/api/users', (req, res) => {
   res.status(501);
 })
 
+app.post('/api/users/:id/exercises', (req, res) => {
+  res.status(501);
+})
+
 const listener = app.listen(process.env.PORT || 3000, () => {
   console.log('Your app is listening on port ' + listener.address().port)
 })
