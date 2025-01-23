@@ -1,8 +1,11 @@
 import express from 'express'
 import cors from 'cors'
+import mongoose from 'mongoose'
 require('dotenv').config()
 
 const app = express()
+
+await mongoose.connect(process.env.MONGO_URI)
 
 app.use(cors())
 app.use(express.static('public'))
