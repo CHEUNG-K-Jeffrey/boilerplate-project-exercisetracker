@@ -8,7 +8,7 @@ const app = express()
 
 await mongoose.connect(process.env.MONGO_URI)
 
-const Users = model('Users', new Schema({
+const Users = mongoose.model('Users', new mongoose.Schema({
   username: String
 }))
 
