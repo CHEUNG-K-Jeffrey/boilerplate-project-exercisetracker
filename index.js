@@ -7,6 +7,10 @@ const app = express()
 
 await mongoose.connect(process.env.MONGO_URI)
 
+const Users = model('Users', new Schema({
+  username: String
+}))
+
 app.use(cors())
 app.use(express.static('public'))
 app.get('/', (req, res) => {
